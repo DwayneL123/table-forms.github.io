@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABLES & FORMS</title>
+</head>
+  <meta charset="UTF-8">
+  <title>Invoice and Form</title>
+  <style>
+    body {
+      font-family:Tahoma, Verdana, sans-serif;
+      padding: 20px;
+      color: black;
+    }
+
+    table {
+      width: 700px;
+      margin: 20px auto;
+      border-collapse: collapse;
+      border: 3px solid #2b2b2b;
+    }
+
+    td, th {
+      border: 1px solid #2b2b2b;
+      padding: 8px;
+      vertical-align: top;
+    }
+
+    .main-header {
+      background-color: #bde3f3;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+      border-bottom: 3px solid #2b2b2b;
+    }
+
+    .invoice-details {
+      background-color: #3e3e8c;
+      color: white;
+      font-weight: bold;
+    }
+
+    .pay-to,
+    .customer {
+      background-color: #b4f0b4;
+    }
+
+    .table-header {
+      background-color: #3e3e8c;
+      color: white;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .right {
+      text-align: right;
+    }
+
+    .left {
+      text-align: left;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    .grand-total {
+      background-color: #e0e0e0;
+    }
+
+    input[type=text], textarea, select {
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    input[type=radio], input[type=checkbox] {
+      margin-right: 5px;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    button[type=submit] {
+      width: 100%;
+      background-color: #3e3e8c;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: Verdana;
+      font-size: 1.125em;
+    }
+
+    button[type=submit]:hover {
+      background-color: #23379683;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <link rel="stylesheet" href="text/css">
+  <!--LEAÑO, DWAYNE MONTY-->
+  <!--4/20/2025-->
+
+  <!--Table-->
+  <table>
+    <tr>
+      <td colspan="4" class="main-header">Invoice Tabular data</td>
+    </tr>
+    <tr class="invoice-details">
+      <td colspan="2"><strong>Invoice #123456789</strong></td>
+      <td colspan="2" class="right"><strong>14 January 2025</strong></td>
+    </tr>
+    <tr>
+      <td colspan="2" class="pay-to">
+        <strong>Pay to:</strong><br>
+        Acme Billing Co.<br>
+        123 Main St.<br>
+        Cityville, NA 12345
+      </td>
+      <td colspan="2" class="customer">
+        <strong>Customer:</strong><br>
+        John Smith<br>
+        321 Willow Way<br>
+        Southeast Northwestereshire, MA 54321
+      </td>
+    </tr>
+    <tr class="table-header">
+      <th>Name / Description</th>
+      <th>Qty.</th>
+      <th class="center">@</th>
+      <th class="right">Cost</th>
+    </tr>
+    <tr>
+      <td>Paperclips</td>
+      <td class="center">1000</td>
+      <td class="center">0.01</td>
+      <td class="right">10.00</td>
+    </tr>
+    <tr>
+      <td>Staples (box)</td>
+      <td class="center">100</td>
+      <td class="center">1.00</td>
+      <td class="right">100.00</td>
+    </tr>
+    <tr>
+      <td>Bond Paper (box)</td>
+      <td class="center">100</td>
+      <td class="center">1.00</td>
+      <td class="right">100.00</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="left bold">Subtotal</td>
+      <td class="right">110.00</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="left">100.00</td>
+      <td class="right">100.00</td>
+      <td class="right">8.80</td>
+    </tr>
+    <tr class="grand-total">
+      <td colspan="3" class="left bold">Grand Total</td>
+      <td class="right bold">$ 118.80</td>
+    </tr>
+  </table>
+
+  <!--Form-->
+  <form method="post" action="greetings.html">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+
+      <tbody>
+      <tr>
+        <td><label for="name">Name:</label></td>
+        <td><input type="text" id="name" name="name" placeholder="Type your name here" maxlength="50" required></td>
+      </tr>
+      <tr>
+        <td>Sex:</td>
+        <td>
+          <label><input type="radio" name="sex" value="male" checked> Male</label><br>
+          <label><input type="radio" name="sex" value="female"> Female</label><br>
+          <label><input type="radio" name="sex" value="other"> Other</label>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="eyeColor">Eye Color</label></td>
+        <td>
+          <select id="eyeColor" name="eyeColor" size="1">
+            <option value="black">Black</option>
+            <option value="brown">Brown</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Check all that apply</td>
+        <td>
+          <label><input type="checkbox" name="feature1" value="6ft."> Over 6ft. Tall</label><br>
+          <label><input type="checkbox" name="feature2" value="200lbs."> Over 200 pounds</label><br>
+          <label><input type="checkbox" name="feature3" value="less200lbs."> Less than 200 pounds</label>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="ability">Describe your athletic ability</label></td>
+        <td><textarea id="ability" name="ability" rows="4" cols="30" required disabled></textarea></td>
+      </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td colspan="2">
+            <button type="submit">Enter my Information</button>
+          </td>
+        </tr>
+      </tfoot>
+      
+    </table>
+  </form>
+
+</body>
+</html>
